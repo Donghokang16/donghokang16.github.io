@@ -1,43 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Your Name - Academic Portfolio</title>
+  <title>Dong Ho Kang</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
   <style>
-    body {
-      background-color: white;
-      color: black;
-      font-family: Arial, sans-serif;
-    }
-    .header {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .content {
-      text-align: center;
-      margin-top: 50px;
+    .welcome-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      flex-direction: column;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header with Research and CV links -->
-  <div class="header">
-    <a href="https://donghokang16.github.io/JMP_donghokang.pdf" target="_blank">Research</a>
-    &nbsp;|&nbsp;
-    <a href=https://github.com/Donghokang16/donghokang16.github.io/IMG_5724.jpg" target="_blank">CV</a>
-  </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <!-- Other navbar code here -->
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="https://donghokang16.github.io/CV.pdf" target="_blank">CV</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Research
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://donghokang16.github.io/JMP.pdf" target="_blank">JMP</a></li>
+            <li><a href="https://donghokang16.github.io/AnotherProject.pdf" target="_blank">Another Project</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-  <!-- Main content with photo and greeting -->
-  <div class="content">
-        <img src="https://donghokang16.github.io/IMG_5724.jpg" alt="IMG_5724.jpg" style="width: 300px;">
-
-    <p>Hello and welcome!
-      <p>My name is Dong Ho Kang, but you can call me Dongho.
-      <p>I'm currently a Ph.D. candidate in the Department of Economics at the University of Missouri,
-      <p>and specializing in real estate, household finance, and quantitative macroeconomics.
-      <p>I am actively looking for opportunities in the 2023-2024 job market.
-      <p>I am available for interviews at the upcoming AEA meeting.
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <!-- Image Column -->
+      <div class="col-md-4">
+        <img src="https://donghokang16.github.io/IMG_5724.jpg" alt="IMG_5724" class="img-responsive">
+      </div>
+      <!-- Welcome Text -->
+      <div class="col-md-8 welcome-text">
+        <h1>Hello and Welcome!</h1>
+        <p>My name is Dong Ho Kang. I specialize in ... </p>
+      </div>
+    </div>
   </div>
 
 </body>
