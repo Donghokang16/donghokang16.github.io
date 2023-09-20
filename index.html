@@ -9,18 +9,18 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
   <style>
-    .welcome-text {
+    .welcome-section {
       display: flex;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
-      flex-direction: column;
+    }
+    .welcome-img img {
+      max-width: 100%;
+      max-height: 500px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav class="navbar navbar-inverse navbar-static-top">
     <div class="container">
       <div class="navbar-header">
@@ -36,44 +36,24 @@
         <ul class="nav navbar-nav">
           <li><a href="index.html">Home</a></li>
           <li><a href="https://donghokang16.github.io/CV.pdf" target="_blank">CV</a></li>
-          <li><a href="#research-section">Research</a></li>
+          <li><a href="research.html">Research</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Page Content -->
   <div class="container">
-    <div class="row">
-      <!-- Image Column -->
-      <div class="col-md-4">
-        <img src="https://donghokang16.github.io/IMG_5724.jpg" alt="IMG_5724" class="img-responsive">
+    <div class="row welcome-section">
+      <div class="col-md-6">
+        <img src="https://donghokang16.github.io/IMG_5724.jpg" alt="IMG_5724" class="img-responsive welcome-img">
       </div>
-      <!-- Welcome Text -->
-      <div class="col-md-8 welcome-text">
+      <div class="col-md-6">
         <h1>Hello and Welcome!</h1>
         <p>My name is Dong Ho Kang, but you can call me Dongho.</p>
         <p>I'm currently a Ph.D. candidate in the Department of Economics at the University of Missouri.</p>
         <p>I am specializing in real estate, household finance, and quantitative macroeconomics.</p>
         <p>I am actively looking for opportunities in the 2023-2024 job market.</p>
         <p>I am available for interviews at the upcoming AEA meeting.</p>
-      </div>
-    </div>
-    
-    <!-- Research Section -->
-    <div class="row" id="research-section">
-      <div class="col-md-12">
-        <h2>Research</h2>
-        <ul>
-          <li>
-            <a href="https://donghokang16.github.io/JMP_donghokang.pdf" target="_blank">JMP</a>
-            <p>Summary: This paper focuses on ...</p>
-          </li>
-          <li>
-            <a href="https://donghokang16.github.io/AnotherProject.pdf" target="_blank">Another Project</a>
-            <p>Summary: This project aims to ...</p>
-          </li>
-        </ul>
       </div>
     </div>
   </div>
