@@ -11,26 +11,33 @@
   <style>
     /* Existing Styles */
     .welcome-section {
-       font-size: 1.5em;
+      font-size: 1.5em;
       display: flex;
-      align-items: center;
+      align-items: stretch; /* makes the text section height equal to the image section */
     }
     .welcome-img img {
       max-width: 100%;
-      max-height: 300px;
+      height: auto;
+      object-fit: cover;
     }
     h1 {
-      font-size: 2.5em; 
+      font-size: 2.5em;
     }
-
-    /* New Style to Increase Navbar Font Size */
-    .navbar-nav > li > a {
+    /* New Style to Increase Navbar Font Size and Center Text */
+    .navbar-nav {
       font-size: 1.5em;
+      text-align: center;
+    }
+    .navbar-nav > li {
+      float: none;
+      display: inline-block;
+    }
+    .navbar-nav > li > a {
+      text-align: center;
     }
   </style>
 </head>
 <body>
-
   <nav class="navbar navbar-inverse navbar-static-top">
     <div class="container">
       <div class="navbar-header">
@@ -41,7 +48,6 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-
       <div class="collapse navbar-collapse" id="navbar-collapse">
         <ul class="nav navbar-nav">
           <li><a href="index.html">Home</a></li>
@@ -51,14 +57,13 @@
       </div>
     </div>
   </nav>
-
   <div class="container">
     <div class="row welcome-section">
-      <div class="col-md-6">
-        <img src="https://donghokang16.github.io/IMG_5724.jpg" alt="IMG_5724" class="img-responsive welcome-img">
+      <div class="col-md-6 welcome-img">
+        <img src="https://donghokang16.github.io/IMG_5713-2.jpg" alt="IMG_5713-2" class="img-responsive">
       </div>
       <div class="col-md-6">
-       <h1>Hello and Welcome!</h1>
+        <h1>Hello and Welcome!</h1>
         <p>My name is Dong Ho Kang, but you can call me Dongho.</p>
         <p>I'm currently a Ph.D. candidate in the Department of Economics at the University of Missouri.</p>
         <p>I am specializing in quantitative macroeconomics, household finance, and real estate.</p>
@@ -67,6 +72,5 @@
       </div>
     </div>
   </div>
-
 </body>
 </html>
