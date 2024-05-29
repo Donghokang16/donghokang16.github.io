@@ -9,11 +9,19 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
   <style>
-    /* Existing Styles */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      height: 100%;
+      display: flex;
+      align-items: center; /* Centers the row vertically */
+      justify-content: center; /* Centers the row horizontally */
+    }
     .welcome-section {
       font-size: 1.5em;
-      display: flex;
-      align-items: stretch; /* makes the text section height equal to the image section */
     }
     .welcome-img img {
       max-width: 100%;
@@ -23,7 +31,6 @@
     h1 {
       font-size: 2.5em;
     }
-    /* New Style to Increase Navbar Font Size and Center Text */
     .navbar-nav {
       font-size: 1.5em;
       text-align: center;
@@ -45,7 +52,7 @@
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          <rows class="icon-bar"></span>
         </button>
       </div>
       <div class="collapse navbar-collapse" id="navbar-collapse">
@@ -53,6 +60,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="https://donghokang16.github.io/CV_donghokang.pdf" target="_blank">CV</a></li>
           <li><a href="research.html">Research</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
         </ul>
       </div>
     </div>
@@ -67,7 +75,6 @@
         <p>My name is Dong Ho Kang, but you can call me Dongho.</p>
         <p>I am currently a Post-Doctoral Research Fellow at the Center for Macroeconomic Research at the University of Cologne, Germany.</p>
         <p>My specialization is in quantitative macroeconomics, household finance, and real estate.</p>
-         <p></p>
       </div>
     </div>
   </div>
