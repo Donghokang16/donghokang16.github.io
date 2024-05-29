@@ -8,81 +8,53 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-    html, body {
+    body, html {
       height: 100%;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
     }
-    .container, .container-fluid {
+    .container {
       display: flex;
-      flex-direction: column; /* Stack elements vertically */
-      align-items: center; /* Center-align items */
-      justify-content: center; /* Center vertically in the viewport */
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       height: 100%;
-      padding: 0;
-    }
-    .welcome-section {
       text-align: center;
-      padding: 20px;
-      font-size: 1.4em; /* Increased font size for better readability */
-      width: 100%; /* Ensures the section uses full container width */
     }
-    .welcome-img img {
-      width: 600px; /* Control image size */
-      height: auto;
-      display: block;
-      margin-bottom: 20px; /* Space between image and text */
+    h1, h2 {
+      margin: 0.5em 0;
     }
-    h1 {
-      font-size: 3em; /* Larger heading size */
+    p {
       margin-top: 0;
+      margin-bottom: 1em;
+      font-size: 1.2em;
     }
-    .navbar {
-      font-size: 1.4em; /* Increased font size */
-      margin-bottom: 0;
-      min-height: 60px; /* Adjusted navbar height */
-      width: 100%;
+    img {
+      width: 200px; /* Adjust size as needed */
+      height: auto;
+      border-radius: 50%; /* Makes the image round */
+      margin-bottom: 20px;
     }
-    .navbar-inverse {
-      background-color: #333;
-      border-color: #333;
+    .links a {
+      display: block;
+      margin: 10px 0;
+      color: #007bff;
+      text-decoration: none;
     }
-    .navbar-nav > li > a {
-      padding-top: 20px;
-      padding-bottom: 20px;
+    .links a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span the="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="https://donghokang16.github.io/CV_donghokang.pdf" target="_blank">CV</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="teaching.html">Teaching</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
   <div class="container">
-    <div class="welcome-img">
-      <img src="https://donghokang16.github.io/profile.JPEG" alt="Dong Ho Kang" class="img-responsive">
-    </div>
-    <div class="welcome-section">
-      <h1>Hello and Welcome!</h1>
-      <p>My name is Dong Ho Kang, but you can call me Dongho.</p>
-      <p>I am currently a Post-Doctoral Research Fellow at the Center for Macroeconomic Research at the University of Cologne, Germany.</p>
-      <p>My specialization is in quantitative macroeconomics, household finance, and real estate.</p>
+    <img src="https://donghokang16.github.io/profile.JPEG" alt="Dong Ho Kang">
+    <h1>Dong Ho Kang</h1>
+    <p>Post-Doctoral Research Fellow at the Center for Macroeconomic Research, University of Cologne</p>
+    <div class="links">
+      <a href="https://donghokang16.github.io/CV_donghokang.pdf" target="_blank">Curriculum Vitae</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
     </div>
   </div>
 </body>
