@@ -4,9 +4,9 @@
   <title>Dong Ho Kang</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
     html, body {
       height: 100%;
@@ -14,51 +14,46 @@
       padding: 0;
     }
     .container {
-      height: 100%;
       display: flex;
-      align-items: center; /* Centers the row vertically */
-      justify-content: center; /* Centers the row horizontally */
+      flex-direction: column; /* Stack vertically */
+      justify-content: center;
+      height: 100%;
     }
     .welcome-section {
-      font-size: 1.5em;
+      text-align: center; /* Center-align text */
+      padding: 20px; /* Add padding for spacing */
+      font-size: 1.2em;
     }
     .welcome-img img {
       max-width: 100%;
       height: auto;
-      object-fit: cover;
     }
     h1 {
       font-size: 2.5em;
+      margin-top: 0;
     }
     .navbar {
-      font-size: 1.8em; /* Increased font size */
-      padding: 20px 0; /* Increased padding for a taller navbar */
-    }
-    .navbar-nav {
-      text-align: center;
-    }
-    .navbar-nav > li {
-      float: none;
-      display: inline-block;
-    }
-    .navbar-nav >  a {
-      text-align: center;
-      padding: 10px 15px; /* More padding around links */
+      font-size: 1.2em;
+      margin-bottom: 0; /* Removes gap between nav and content */
     }
     .navbar-inverse {
-      background-color: #222; /* Ensuring background color is defined */
-      border-color: #080808; /* Ensuring border color is defined */
+      background-color: #333;
+      border-color: #333;
+    }
+    .navbar-nav > li > a {
+      padding-top: 15px;
+      padding-bottom: 15px;
     }
   </style>
 </head>
 <body>
   <nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container">
+    <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
-          <span the="icon-bar"></span>
+          <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
       </div>
@@ -67,17 +62,15 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="https://donghokang16.github.io/CV_donghokang.pdf" target="_blank">CV</a></li>
           <li><a href="research.html">Research</a></li>
-          <li><a href="teaching.html">Teaching</a></li> <!-- Added link -->
+          <li><a href="teaching.html">Teaching</a></li>
         </ul>
       </div>
     </div>
   </nav>
   <div class="container">
     <div class="row welcome-section">
-      <div class="col-md-6 welcome-img">
-        <img src="https://donghokang16.github.io/profile.JPEG" alt="profile" class="img-responsive">
-      </div>
-      <div class="col-md-6">
+      <div class="col-md-12">
+        <img src="https://donghokang16.github.io/profile.JPEG" alt="profile" class="img-responsive center-block" style="max-width: 200px; margin-bottom: 20px;">
         <h1>Hello and Welcome!</h1>
         <p>My name is Dong Ho Kang, but you can call me Dongho.</p>
         <p>I am currently a Post-Doctoral Research Fellow at the Center for Macroeconomic Research at the University of Cologne, Germany.</p>
