@@ -4,58 +4,89 @@
   <title>Dong Ho Kang</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 3 -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <style>
     body, html {
       height: 100%;
       margin: 0;
       font-family: Arial, sans-serif;
     }
-    .container {
+
+    /* 🔒 메인 영역에만 레이아웃 적용 (네비바 .container와 충돌 방지) */
+    main.container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100%;
+      height: calc(100% - 50px); /* 대략적인 네비 높이만큼 여유 */
       text-align: center;
     }
-    h1, h2 {
-      margin: 0.5em 0;
-    }
+
+    h1, h2 { margin: 0.5em 0; }
+
     p {
       margin-top: 0;
       margin-bottom: 1em;
       font-size: 2em;
     }
+
     img {
-      width: 600px; /* Adjust size as needed */
+      width: 600px; /* 기본 이미지 규칙은 유지 */
       height: auto;
       margin-bottom: 20px;
     }
 
-    /* ✅ 추가: 프로필 사진만 작게 보이도록 오버라이드 */
+    /* ✅ 프로필 사진만 작게 */
     .avatar {
-      width: 180px;     /* 필요하면 160~220px로 조절 */
+      width: 180px;  /* 필요 시 160~220px로 조절 */
       height: auto;
     }
 
     .navbar-inverse .navbar-nav > li > a {
-      font-size: 2em; /* Increased font size for navigation links */
+      font-size: 2em; /* 네비 링크 크게 (원문의 설정 유지) */
     }
+
     .links a {
       display: block;
       margin: 10px 0;
       color: #007bff;
       text-decoration: none;
     }
-    .links a:hover {
-      text-decoration: underline;
-    }
+    .links a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
+
+  <!-- ⬇️ 네가 준 네비게이션 그대로 삽입 -->
+  <nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+                data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- (선택) 브랜드 넣고 싶으면 아래 주석 해제
+        <a class="navbar-brand" href="index.html">Dong Ho Kang</a>
+        -->
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="https://donghokang16.github.io/cv2025Oct.pdf" target="_blank">CV</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="teaching.html" class="banner-link">Teaching</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 메인 콘텐츠 -->
   <main class="container" role="main">
     <blockquote>
       <p>“The privilege of a lifetime is to become who you truly are.”</p>
@@ -87,5 +118,9 @@
       </p>
     </section>
   </main>
+
+  <!-- Bootstrap JS (jQuery 먼저) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
