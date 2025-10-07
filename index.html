@@ -49,33 +49,36 @@
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+  <main class="container" role="main">
+    <blockquote>
+      <p>“The privilege of a lifetime is to become who you truly are.”</p>
+      <footer>— Carl Gustav Jung</footer>
+    </blockquote>
+
+    <section class="profile" aria-labelledby="name">
+      <img
+        class="avatar"
+        src="https://donghokang16.github.io/profile.jpeg"
+        alt="Portrait of Dong Ho Kang"
+        loading="lazy"
+        decoding="async"
+      />
+      <div>
+        <h1 id="name">Dong Ho Kang</h1>
+        <p class="tagline">You can call me <strong>Dongho</strong>.</p>
       </div>
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="https://donghokang16.github.io/CV_Sep2024.pdf" target="_blank">CV</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="teaching.html" class="banner-link">Teaching</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="container">
-    <p> “The privilege of a lifetime is to become who you truly are.”
-    <p>                                              ― Carl Gustav Jung
-    <img src="https://donghokang16.github.io/profile.jpeg" alt="Dong Ho Kang">
-    <p>My name is Dong Ho Kang, but you can call me Dongho.</p>
-    <p>I am currently a Post-Doctoral Research Fellow at the Center for Macroeconomic Research at the University of Cologne, Germany.</p>
-    <p>My specialization is in quantitative macroeconomics, household finance, and real estate.</ht ml>
-  </div>
+    </section>
+
+    <section aria-label="About">
+      <p>
+        I am a <strong>Post-Doctoral Research Fellow</strong> at the
+        <em>Center for Economic Research</em>, University of Cologne, Germany.
+      </p>
+      <p>
+        My specialization is in <strong>quantitative macroeconomics</strong>,
+        <strong>household finance</strong>, and <strong>real estate</strong>.
+      </p>
+    </section>
+  </main>
 </body>
 </html>
