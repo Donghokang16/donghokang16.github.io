@@ -2,49 +2,90 @@
 <html lang="en">
 <head>
   <title>Dong Ho Kang</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap 3 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
   <style>
-    body, html {
-      height: 100%;
+    /* 고정 헤더(있을 경우) 뒤에 앵커가 가려지지 않도록 */
+    html { scroll-padding-top: 80px; }
+    h1, h2, h3 { scroll-margin-top: 80px; }
+
+    body {
       margin: 0;
       font-family: Arial, sans-serif;
+      color: #111;
+      background: #fafafa;
+      line-height: 1.6;
     }
+
+    /* 레이아웃: 높이 100%로 가운데 정렬하던 걸 패딩 기반으로 변경 */
     .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 48px 16px 56px; /* 상단 여백으로 내용이 잘 보이게 */
       text-align: center;
     }
-    h1, h2 {
-      margin: 0.5em 0;
+
+    blockquote {
+      border-left: 4px solid #8b5cf6; /* violet */
+      background: rgba(139, 92, 246, 0.08);
+      padding: 16px 16px 12px;
+      margin: 0 0 24px;
+      border-radius: 8px;
+      font-size: 18px;
     }
-    p {
-      margin-top: 0;
-      margin-bottom: 1em;
-      font-size: 2em;
+    blockquote footer {
+      color: #6b7280; /* gray-500 */
+      font-size: 14px;
+      margin-top: 6px;
     }
-    img {
-      width: 600px; /* Adjust size as needed */
-      height: auto;
-      margin-bottom: 20px;
+
+    /* 프로필 영역 */
+    .profile {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 18px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
     }
-    .navbar-inverse .navbar-nav > li > a {
-      font-size: 2em; /* Increased font size for navigation links */
-    }
-    .links a {
+
+    /* 핵심: 세로로 긴 사진을 제한하고 중앙 크롭 */
+    .avatar {
+      width: 160px;
+      height: 160px;            /* 고정 높이 */
+      max-height: 45vh;         /* 화면 높이의 45% 넘지 않음 */
+      object-fit: cover;        /* 중앙 기준으로 크롭 */
+      object-position: center;
+      border-radius: 12px;
       display: block;
-      margin: 10px 0;
-      color: #007bff;
-      text-decoration: none;
+      margin: 0 auto;
+      box-shadow: 0 8px 24px rgba(0,0,0,.15);
     }
-    .links a:hover {
-      text-decoration: underline;
+
+    h1 {
+      font-size: 28px;
+      margin: 0 0 4px;
+      line-height: 1.2;
+    }
+    .tagline { margin: 0; color: #6b7280; }
+
+    /* 본문 텍스트 크기가 너무 커서 밀리는 문제 조정 */
+    p { margin: 0 0 12px; font-size: 16px; }
+
+    /* 반응형 */
+    @media (max-width: 600px) {
+      .profile {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .avatar {
+        width: 128px;
+        height: 128px;
+      }
     }
   </style>
 </head>
@@ -80,5 +121,10 @@
       </p>
     </section>
   </main>
+
+  <!-- (필요 시) 부트스트랩 JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
+
