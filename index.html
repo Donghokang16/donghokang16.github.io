@@ -1,126 +1,199 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <title>Dong Ho Kang</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Bootstrap 3 -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dong Ho Kang | Academic Homepage</title>
+  <meta name="description" content="Academic homepage of Dong Ho Kang" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body, html {
-      height: 100%;
-      margin: 0;
-      font-family: Arial, sans-serif;
+    :root {
+      --bg: #0b0c0f;
+      --card: #11131a;
+      --text: #e6e8ef;
+      --muted: #a7adbd;
+      --brand: #6aa9ff;
+      --accent: #e6f0ff;
+      --border: #1a1d26;
     }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: var(--bg); color: var(--text); }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    /* 🔒 메인 영역에만 레이아웃 적용 (네비바 .container와 충돌 방지) */
-    main.container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: calc(100% - 50px); /* 대략적인 네비 높이만큼 여유 */
-      text-align: center;
-    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 32px 20px 60px; }
 
-    h1, h2 { margin: 0.5em 0; }
+    header { display: flex; align-items: center; gap: 24px; }
+    header img { width: 120px; height: 120px; object-fit: cover; border-radius: 16px; border: 1px solid var(--border); background: #0b0c0f; }
+    .title { display:flex; flex-direction:column; gap:6px; }
+    h1 { margin: 0; font-size: 28px; letter-spacing: 0.2px; }
+    .subtitle { color: var(--muted); font-size: 15px; }
+    .contact { display:flex; gap: 14px; flex-wrap: wrap; margin-top: 6px; }
+    .chip { background: var(--card); border: 1px solid var(--border); padding: 6px 10px; border-radius: 999px; font-size: 13px; color: var(--muted); }
 
-    p {
-      margin-top: 0;
-      margin-bottom: 1em;
-      font-size: 2em;
-    }
+    nav { position: sticky; top: 0; backdrop-filter: blur(6px); background: rgba(11,12,15,0.7); border-bottom: 1px solid var(--border); z-index: 5; }
+    .tabs { display:flex; gap: 10px; padding: 10px 20px; max-width: 1000px; margin: 0 auto; }
+    .tab { padding: 10px 14px; border-radius: 10px; font-weight: 600; font-size: 14px; color: var(--muted); border: 1px solid transparent; cursor: pointer; }
+    .tab.active { color: var(--text); background: var(--card); border-color: var(--border); }
 
-    img {
-      width: 600px; /* 기본 이미지 규칙은 유지 */
-      height: auto;
-      margin-bottom: 20px;
-    }
+    .section { display: none; padding-top: 26px; }
+    .section.active { display: block; animation: fade 180ms ease-out; }
+    @keyframes fade { from { opacity: 0; transform: translateY(6px);} to { opacity: 1; transform: translateY(0);} }
 
-    /* ✅ 프로필 사진만 작게 */
-    .avatar {
-      width: 220px;  /* 필요 시 160~220px로 조절 */
-      height: auto;
-    }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px; }
+    h2 { font-size: 20px; margin: 0 0 12px; }
+    h3 { font-size: 16px; margin: 14px 0 6px; }
+    ul { margin: 10px 0 0 20px; }
+    li { margin: 6px 0; line-height: 1.4; }
+    .muted { color: var(--muted); }
+    .two-col { display: grid; grid-template-columns: 1.35fr 1fr; gap: 18px; }
+    @media (max-width: 860px){ .two-col { grid-template-columns: 1fr; } header { align-items: flex-start; } }
 
-    .navbar-inverse .navbar-nav > li > a {
-      font-size: 2em; /* 네비 링크 크게 (원문의 설정 유지) */
-    }
-
-    .links a {
-      display: block;
-      margin: 10px 0;
-      color: #007bff;
-      text-decoration: none;
-    }
-    .links a:hover { text-decoration: underline; }
+    footer { margin-top: 40px; color: var(--muted); font-size: 13px; text-align: center; }
+    .download { display:inline-flex; align-items:center; gap:8px; border:1px solid var(--border); background: var(--card); padding:8px 10px; border-radius:10px; font-weight:600; }
   </style>
 </head>
 <body>
-
-  <!-- ⬇️ 네가 준 네비게이션 그대로 삽입 -->
-  <nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed"
-                data-toggle="collapse" data-target="#navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!-- (선택) 브랜드 넣고 싶으면 아래 주석 해제
-        <a class="navbar-brand" href="index.html">Dong Ho Kang</a>
-        -->
-      </div>
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="https://donghokang16.github.io/cv_2025Oct.pdf" target="_blank">CV</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="teaching.html" class="banner-link">Teaching</a></li>
-        </ul>
-      </div>
+  <nav>
+    <div class="tabs">
+      <button class="tab active" data-target="home">Home</button>
+      <button class="tab" data-target="research">Research</button>
+      <button class="tab" data-target="teaching">Teaching</button>
+      <button class="tab" data-target="cv">CV</button>
     </div>
   </nav>
 
-  <!-- 메인 콘텐츠 -->
-  <main class="container" role="main">
-    <blockquote>
-      <p>“The privilege of a lifetime is to become who you truly are.”</p>
-      <footer>— Carl Gustav Jung</footer>
-    </blockquote>
+  <div class="container">
+    <header>
+      <!-- Replace src with your actual photo path, e.g., assets/photo.jpg -->
+      <img src="assets/photo.jpg" alt="Portrait of Dong Ho Kang" />
+      <div class="title">
+        <h1>Dong Ho Kang</h1>
+        <div class="subtitle">Post-Doctoral Research Fellow, Department of Economics, University of Cologne</div>
+        <div class="contact">
+          <span class="chip">University of Cologne • CMR • Sibille-Hartmann-Str. 2–4, 50969 Cologne</span>
+          <a class="chip" href="mailto:kang@wiso.uni-koeln.de">kang@wiso.uni-koeln.de</a>
+          <span class="chip">+49 151 5369 6367</span>
+        </div>
+      </div>
+    </header>
 
-    <section class="profile" aria-labelledby="name">
-      <img
-        class="avatar"
-        src="https://donghokang16.github.io/profile.jpeg"
-        alt="Portrait of Dong Ho Kang"
-        loading="lazy"
-        decoding="async"
-      />
-      <div>
-        <h1 id="name">Dong Ho Kang</h1>
-        <p class="tagline">You can call me <strong>Dongho</strong>.</p>
+    <!-- HOME / INTRO -->
+    <section class="section active" id="home">
+      <div class="two-col">
+        <div class="card">
+          <h2>About</h2>
+          <p>
+            I am a post-doctoral research fellow in the <a href="https://www.wiso.uni-koeln.de/en/faculties/management-economics-and-social-sciences" target="_blank" rel="noreferrer">Department of Economics</a> at the University of Cologne. My research lies at the intersection of quantitative macroeconomics, household finance, housing, and monetary economics.
+          </p>
+          <p class="muted">This site hosts my research papers, teaching, and CV. Feel free to get in touch.</p>
+        </div>
+        <div class="card">
+          <h2>Research Interests</h2>
+          <ul>
+            <li>Quantitative Macroeconomics</li>
+            <li>Household Finance</li>
+            <li>Housing</li>
+            <li>Monetary Economics</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section aria-label="About">
-      <p>
-        I am a <strong>Post-Doctoral Research Fellow</strong> at the
-        <em>Center for Economic Research</em>, University of Cologne, Germany.
-      </p>
-      <p>
-        My specialization is in <strong>quantitative macroeconomics</strong>,
-        <strong>household finance</strong>, and <strong>real estate</strong>.
-      </p>
-    </section>
-  </main>
+    <!-- RESEARCH -->
+    <section class="section" id="research">
+      <div class="card">
+        <h2>Working Papers</h2>
+        <ul>
+          <li>
+            <strong>Effect of Credit Score Constraints on Mortgage Loans in the Housing Market</strong> — Job Market Paper
+            <br/><a href="assets/JMP_donghokang.pdf" target="_blank" rel="noreferrer">Download PDF</a>
+          </li>
+          <li>
+            <strong>Residential Construction and the Housing Price Boom after the Great Recession</strong>
+          </li>
+          <li>
+            <strong>The Opportunity Cost of Money and the Relevance of Monetary Policy</strong> (with Joseph Haslag) — conditionally accepted, <em>International Journal of Central Banking</em>
+          </li>
+        </ul>
 
-  <!-- Bootstrap JS (jQuery 먼저) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <h2 style="margin-top:18px;">Work in Progress</h2>
+        <ul>
+          <li><strong>Monetary Policy Independence in Korea</strong></li>
+          <li><strong>A Quantitative Model of Residential Solar Adoption, Housing Choice, and the Solar Home Premium</strong> (with Jialu Shen, Ariel Sun)</li>
+          <li><strong>Inheritance Taxation and Homeownership</strong> (with Jieheum Yoen)</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top:18px;">
+        <h2>Presentations (Selected)</h2>
+        <ul>
+          <li>T2M (Theories and Methods in Macro), CREST, France — May 2025</li>
+          <li>AREUEA Annual Conference jointly with ASSA — San Francisco, CA — Jan 2025</li>
+          <li>National Chengchi University (NCCU) — Webinar — Mar 2024</li>
+          <li>Munich Research Institute for the Economics of Aging and SHARE analyses — Webinar — Mar 2024</li>
+          <li>University of Cologne, CMR — Feb 2024</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TEACHING -->
+    <section class="section" id="teaching">
+      <div class="card">
+        <h2>Courses</h2>
+        <ul>
+          <li><strong>Housing and the Macroeconomy</strong> (Graduate Seminar) — University of Cologne — Summer 2024, Winter 2024, Summer 2025, Winter 2025</li>
+          <li><strong>Advanced Macroeconomics I</strong> (Research Master) — University of Cologne — Winter 2024</li>
+          <li><strong>Computational Methods</strong> (Masters) — University of Cologne — Summer 2025</li>
+          <li><strong>The Role of Energy and Resource Limitations in the Macroeconomy</strong> (Graduate Seminar) — University of Cologne — Summer 2024</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section class="section" id="cv">
+      <div class="card">
+        <h2>Curriculum Vitae</h2>
+        <p class="muted">Download a PDF version of my full CV below.</p>
+        <a class="download" href="assets/CV_Dong Ho Kang.pdf" target="_blank" rel="noreferrer" title="Download CV PDF">📄 Download CV (PDF)</a>
+        <h3>At a glance</h3>
+        <ul>
+          <li><strong>Current position:</strong> Post-Doctoral Research Fellow, Department of Economics, University of Cologne</li>
+          <li><strong>Education:</strong> Ph.D. in Economics, University of Missouri (2024); M.A. & B.A., Hanyang University</li>
+          <li><strong>Programming:</strong> Fortran, Stata, MATLAB, R, LaTeX; Parallel Computing (OpenMP)</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Dong Ho Kang · Last updated <span id="updated"></span>
+    </footer>
+  </div>
+
+  <script>
+    // Tab logic
+    const tabs = document.querySelectorAll('.tab');
+    const sections = document.querySelectorAll('.section');
+    tabs.forEach(t => t.addEventListener('click', () => {
+      tabs.forEach(el => el.classList.remove('active'));
+      sections.forEach(s => s.classList.remove('active'));
+      t.classList.add('active');
+      document.getElementById(t.dataset.target).classList.add('active');
+      if (location.hash !== '#' + t.dataset.target) {
+        history.replaceState(null, '', '#' + t.dataset.target);
+      }
+    }));
+    // Load from hash
+    const hash = location.hash.replace('#','');
+    if (hash) {
+      const btn = document.querySelector(`.tab[data-target="${hash}"]`);
+      if (btn) btn.click();
+    }
+    // Footer dates
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('updated').textContent = new Date().toLocaleDateString(undefined, {year:'numeric', month:'short'});
+  </script>
 </body>
 </html>
