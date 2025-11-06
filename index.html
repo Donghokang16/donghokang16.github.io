@@ -26,7 +26,7 @@
     .container { max-width: 1000px; margin: 0 auto; padding: 32px 20px 60px; }
 
     header { display: grid; grid-template-columns: 1fr 2fr; align-items: center; gap: 24px; }
-    header img { width: 100%; height: auto; object-fit: cover; border-radius: 16px; border: 1px solid var(--border); background: #0b0c0f; }
+    header img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; border-radius: 16px; border: 1px solid var(--border); background: #0b0c0f; }
     .title { display:flex; flex-direction:column; gap:6px; }
     h1 { margin: 0; font-size: 28px; letter-spacing: 0.2px; }
     .subtitle { color: var(--muted); font-size: 15px; }
@@ -45,12 +45,13 @@
     .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px; }
     h2 { font-size: 20px; margin: 0 0 12px; }
     h3 { font-size: 16px; margin: 14px 0 6px; }
-    .quote { text-align:center; font-style: italic; color: var(--muted); margin: 6px 0 18px; font-size: 20px; }
+    .quote { text-align:center; font-style: italic; color: var(--muted); margin: 6px 0 18px; font-size: 24px; font-weight: 700; }
     ul { margin: 10px 0 0 20px; }
+    .portrait { aspect-ratio: 3 / 4; max-height: 520px; overflow: hidden; border-radius: 16px; }
     li { margin: 6px 0; line-height: 1.4; }
     .muted { color: var(--muted); }
     .two-col { display: grid; grid-template-columns: 1.35fr 1fr; gap: 18px; }
-    @media (max-width: 860px){ .two-col { grid-template-columns: 1fr; } header { align-items: flex-start; } }
+    @media (max-width: 860px){ .two-col { grid-template-columns: 1fr; } header { align-items: flex-start; grid-template-columns: 1fr; } .portrait { max-height: 380px; } } header { align-items: flex-start; } }
 
     footer { margin-top: 40px; color: var(--muted); font-size: 13px; text-align: center; }
     .download { display:inline-flex; align-items:center; gap:8px; border:1px solid var(--border); background: var(--card); padding:8px 10px; border-radius:10px; font-weight:600; }
@@ -70,7 +71,7 @@
     <div class="quote">“Ne te quaesiveris extra” — Ralph Waldo Emerson</div>
     <header>
       <!-- Replace src with your actual photo path, e.g., assets/photo.jpg -->
-      <img src="assets/photo.jpg" alt="Portrait of Dong Ho Kang" />
+      <div class="portrait"><img src="assets/profile.jpeg" alt="Portrait of Dong Ho Kang" /></div>
       <div class="title">
         <h1>Dong Ho Kang</h1>
         <div class="subtitle">Post-Doctoral Research Fellow, Department of Economics, University of Cologne</div>
