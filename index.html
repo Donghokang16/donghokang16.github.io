@@ -48,10 +48,12 @@
     .quote { text-align:center; font-style: italic; color: var(--muted); margin: 6px 0 18px; font-size: 24px; font-weight: 700; }
     ul { margin: 10px 0 0 20px; }
     .portrait { aspect-ratio: 3 / 4; max-height: 520px; overflow: hidden; border-radius: 16px; }
+    .home-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 18px; align-items: start; }
+    .right { display: flex; flex-direction: column; gap: 18px; }
     li { margin: 6px 0; line-height: 1.4; }
     .muted { color: var(--muted); }
     .two-col { display: grid; grid-template-columns: 1.35fr 1fr; gap: 18px; }
-    @media (max-width: 860px){ .two-col { grid-template-columns: 1fr; } header { align-item header { align-items: flex-start; grid-template-columns: 1fr; } .portrait { max-height: 380px; } } header { align-items: flex-start; } }
+    @media (max-width: 860px){ .two-col { grid-template-columns: 1fr; } header { align-items: flex-start; grid-template-columns: 1fr; } .portrait { max-height: 360px; } .home-grid { grid-template-columns: 1fr; } } header { align-items: flex-start; grid-template-columns: 1fr; } .portrait { max-height: 380px; } } header { align-items: flex-start; } }
 
     footer { margin-top: 40px; color: var(--muted); font-size: 13px; text-align: center; }
     .download { display:inline-flex; align-items:center; gap:8px; border:1px solid var(--border); background: var(--card); padding:8px 10px; border-radius:10px; font-weight:600; }
@@ -72,33 +74,33 @@
     <!-- HOME / INTRO -->
     <section class="section active" id="home">
       <div class="quote">“Ne te quaesiveris extra” — Ralph Waldo Emerson</div>
-      <header>
-      <div class="portrait"><img src="profile.jpeg" alt="Portrait of Dong Ho Kang" /></div>
-      <div class="title">
-        <h1>Dong Ho Kang</h1>
-        <div class="subtitle">Post-Doctoral Research Fellow, Department of Economics, University of Cologne</div>
-        <div class="contact">
-          <span class="chip">University of Cologne • CMR • Sibille-Hartmann-Str. 2–4, 50969 Cologne</span>
-          <a class="chip" href="mailto:kang@wiso.uni-koeln.de">kang@wiso.uni-koeln.de</a>
-        </div>
-      </div>
-    </header>
-      <div class="two-col">
-        <div class="card">
-          <h2>About</h2>
-          <p>
-            I am a post-doctoral research fellow in the <a href="https://www.wiso.uni-koeln.de/en/faculties/management-economics-and-social-sciences" target="_blank" rel="noreferrer">Department of Economics</a> at the University of Cologne. My research lies at the intersection of quantitative macroeconomics, household finance, housing, and monetary economics.
-          </p>
-          <p class="muted">This site hosts my research papers, teaching, and CV. Feel free to get in touch.</p>
-        </div>
-        <div class="card">
-          <h2>Research Interests</h2>
-          <ul>
-            <li>Quantitative Macroeconomics</li>
-            <li>Household Finance</li>
-            <li>Housing</li>
-            <li>Monetary Economics</li>
-          </ul>
+      <div class="home-grid">
+        <div class="portrait"><img src="profile.jpeg" alt="Portrait of Dong Ho Kang" /></div>
+        <div class="right">
+          <div class="card">
+            <h1 style="margin:0 0 6px; font-size:28px;">Dong Ho Kang</h1>
+            <div class="subtitle" style="margin-bottom:10px;">Post-Doctoral Research Fellow, Department of Economics, University of Cologne</div>
+            <div class="contact">
+              <span class="chip">University of Cologne • CMR • Sibille-Hartmann-Str. 2–4, 50969 Cologne</span>
+              <a class="chip" href="mailto:kang@wiso.uni-koeln.de">kang@wiso.uni-koeln.de</a>
+            </div>
+          </div>
+          <div class="card">
+            <h2>About</h2>
+            <p>
+              I am a post-doctoral research fellow in the <a href="https://www.wiso.uni-koeln.de/en/faculties/management-economics-and-social-sciences" target="_blank" rel="noreferrer">Department of Economics</a> at the University of Cologne. My research lies at the intersection of quantitative macroeconomics, household finance, housing, and monetary economics.
+            </p>
+            <p class="muted">This site hosts my research papers, teaching, and CV. Feel free to get in touch.</p>
+          </div>
+          <div class="card">
+            <h2>Research Interests</h2>
+            <ul>
+              <li>Quantitative Macroeconomics</li>
+              <li>Household Finance</li>
+              <li>Housing</li>
+              <li>Monetary Economics</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -158,7 +160,7 @@
       <div class="card">
         <h2>Curriculum Vitae</h2>
         <p class="muted">Download a PDF version of my full CV below.</p>
-        <a class="download" href="CV_Dong Ho Kang.pdf" target="_blank" rel="noreferrer" title="Download CV PDF">📄 Download CV (PDF)</a>
+        <a class="download" href="CV_donghokang.pdf" target="_blank" rel="noreferrer" title="Download CV PDF">📄 Download CV (PDF)</a>
         
       </div>
     </section>
