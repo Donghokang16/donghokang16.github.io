@@ -34,7 +34,7 @@
     .chip { background: var(--card); border: 1px solid var(--border); padding: 6px 10px; border-radius: 999px; font-size: 13px; color: var(--muted); }
 
     nav { position: sticky; top: 0; backdrop-filter: blur(6px); background: rgba(11,12,15,0.7); border-bottom: 1px solid var(--border); z-index: 5; }
-    .tabs { display:flex; gap: 10px; padding: 10px 20px; max-width: 1000px; margin: 0 auto; }
+    .tabs { display:flex; gap: 10px; padding: 10px 20px; max-width: 1000px; margin: 0 auto; justify-content: center; }
     .tab { padding: 10px 14px; border-radius: 10px; font-weight: 600; font-size: 14px; color: var(--muted); border: 1px solid transparent; cursor: pointer; }
     .tab.active { color: var(--text); background: var(--card); border-color: var(--border); }
 
@@ -51,7 +51,7 @@
     li { margin: 6px 0; line-height: 1.4; }
     .muted { color: var(--muted); }
     .two-col { display: grid; grid-template-columns: 1.35fr 1fr; gap: 18px; }
-    @media (max-width: 860px){ .two-col { grid-template-columns: 1fr; } header { align-items: flex-start; grid-template-columns: 1fr; } .portrait { max-height: 380px; } } header { align-items: flex-start; } }
+    @media (max-width: 860px){ .two-col { grid-template-columns: 1fr; } header { align-item header { align-items: flex-start; grid-template-columns: 1fr; } .portrait { max-height: 380px; } } header { align-items: flex-start; } }
 
     footer { margin-top: 40px; color: var(--muted); font-size: 13px; text-align: center; }
     .download { display:inline-flex; align-items:center; gap:8px; border:1px solid var(--border); background: var(--card); padding:8px 10px; border-radius:10px; font-weight:600; }
@@ -68,9 +68,11 @@
   </nav>
 
   <div class="container">
-    <div class="quote">“Ne te quaesiveris extra” — Ralph Waldo Emerson</div>
-    <header>
-      <!-- Replace src with your actual photo path, e.g., profile.jpeg -->
+
+    <!-- HOME / INTRO -->
+    <section class="section active" id="home">
+      <div class="quote">“Ne te quaesiveris extra” — Ralph Waldo Emerson</div>
+      <header>
       <div class="portrait"><img src="profile.jpeg" alt="Portrait of Dong Ho Kang" /></div>
       <div class="title">
         <h1>Dong Ho Kang</h1>
@@ -81,9 +83,6 @@
         </div>
       </div>
     </header>
-
-    <!-- HOME / INTRO -->
-    <section class="section active" id="home">
       <div class="two-col">
         <div class="card">
           <h2>About</h2>
@@ -160,12 +159,7 @@
         <h2>Curriculum Vitae</h2>
         <p class="muted">Download a PDF version of my full CV below.</p>
         <a class="download" href="CV_Dong Ho Kang.pdf" target="_blank" rel="noreferrer" title="Download CV PDF">📄 Download CV (PDF)</a>
-        <h3>At a glance</h3>
-        <ul>
-          <li><strong>Current position:</strong> Post-Doctoral Research Fellow, Department of Economics, University of Cologne</li>
-          <li><strong>Education:</strong> Ph.D. in Economics, University of Missouri (2024); M.A. & B.A., Hanyang University</li>
-          <li><strong>Programming:</strong> Fortran, Stata, MATLAB, R, LaTeX; Parallel Computing (OpenMP)</li>
-        </ul>
+        
       </div>
     </section>
 
